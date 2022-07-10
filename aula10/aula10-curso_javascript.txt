@@ -1,0 +1,150 @@
+Eventos DOM
+
+Evento seria tudo aquilo que pode acontecer com um determinado elemento que esteja dentro da sua DOM, que pertenca a sua DOM. 
+
+E o que pode acontecer exatamente com esse elemento? Um monte de coisas, mas um dos mais comuns sao os eventos com mouse.
+
+Isso acontece atraves da movimentacao do mouse. 
+
+Por exemplo, quando voce move o mouse para dentro de um elemento e chamado de 'mouseenter'. Ja enquanto voce continua com o mouse dentro do elemento, e chamado de 'mousemove'.
+Agora, quando voce clica o botao do mouse e o mantem pressionado voce tem o 'mousedown' e quando voce solta o botao apos esse clique voce tem o 'mouseup'.
+Voce tambem tem o clique inteiro, ou seja, o famoso "um clique", que, e chamado de 'click'. 
+E claro, da mesma forma que voce entra na area de um elemento, quando voce sai dela voce tem o evento chamado 'mouseout'.
+Resumindo:
+1 - mouseenter   ---> Entra dentro da area de um elemento.
+
+2 - mousemove  ---> Movimenta o cursor dentro da area de um elemento.                                                
+
+3 - mousedown  ---> Clica e mantem pressionado o botao dentro da area de um elemento.
+
+4 - mouseup       ---> Solta o botao de click pressionado dentro da area de um elemento.
+
+5 - click                ---> Click simples do mouse dentro da area de um elemento.
+                               
+6 - mouseout      ---> Sai dentro da area de um elemento.
+
+Para mais informacoes sobre todos os eventos, acessar o site: https://developer.mozilla.org/pt-BR/docs/Web/Events
+
+Agora, para disparar um evento (trata-lo), faz-se o uso de funcoes em JavaScript.
+Uma funcao em JavaScript e um conjunto de codigos que vao ser executadas quando um evento ocorrer. 
+Por exemplo, digamos que voce programe um bloco (conjunto de linhas de uma funcao). Elas nao serao executadas automaticamente, alas irao apenas ocorrer quando o evento que a dispare seja executado pelo seu usuario.
+Para criar uma funcao, dever-se-a fazer o seguinte:
+
+function acao(param){
+bloco
+}
+
+Particularidade do JavaScript: Existe funcoes anonimas, ou seja, sem nomes. So que, para funcionar voce tem que dar um nome para as funcoes. 
+Geralmente, esses nomes sao nomeados de acordo com a acao que ira executar - NAO E UMA REGRA ABSOLUTA.
+Os parametros sao opcionais, podendo ser unicos ou variaveis.
+
+Os eventos podem ser configurados diretamente na parte HTML ou na parte JavaScript. Voce escolhe de acordo com sua preferencia.
+
+Exemplo.:
+	Por HTML:
+	<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+    			<meta charset="UTF-8">
+   			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    			<title>Eventos DOM</title>
+    			<style>
+        				div#area {
+           					font: normal 20pt Arial;
+            					background: green;
+            					color: white;
+            					width: 200px;
+            					height: 200px;
+            					line-height: 200px;
+            					text-align: center;
+       				}
+    			</style>
+		</head>
+		<body>
+    			<div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        				Interaja...
+    			</div>
+
+    			<script>
+        				var a = window.document.querySelector('div#area') // Nao e melhor opcao de se fazer devido a problema de memoria.
+
+        				function clicar() {
+            					a.innerText = 'Clicou!'
+            					a.style.background = 'red'
+        				}
+
+        				function entrar() {
+            					a.innerText = 'Entrou!'
+        				}
+
+        				function sair() {
+            					a.innerText = 'Saiu!'
+            					a.style.background = 'green'
+        				}
+    			</script>
+		</body>
+		</html>
+
+	Por JavaScript (Atraves de Listers):
+	<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+    			<meta charset="UTF-8">
+   			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    			<title>Eventos DOM</title>
+    			<style>
+        				div#area {
+           					font: normal 20pt Arial;
+            					background: green;
+            					color: white;
+            					width: 200px;
+            					height: 200px;
+            					line-height: 200px;
+            					text-align: center;
+       				}
+    			</style>
+		</head>
+		<body>
+    			<div id="area">
+        				Interaja...
+    			</div>
+
+    			<script>
+        				var a = window.document.querySelector('div#area') // Nao e melhor opcao de se fazer devido a problema de memoria.
+				
+				/*
+            					LISTENERS DO JAVASCRIPT:
+            					Ficam monitorando toda a atividade do usuario e executa os eventos apenas quando algo especifico for ocorrer. Polui menos o seu codigo HTML. Muito mais simples, bonito e dinamico.
+        				*/
+        				a.addEventListener('click', clicar)  //  evento que ocorre ao clicar.
+        				a.addEventListener('mouseenter', entrar)  //  evento que ocorre ao entrar.
+        				a.addEventListener('mouseout', sair)  //  evento que ocorre ao sair.
+
+        				function clicar() {
+            					a.innerText = 'Clicou!'
+            					a.style.background = 'red'
+        				}
+
+        				function entrar() {
+            					a.innerText = 'Entrou!'
+        				}
+
+        				function sair() {
+            					a.innerText = 'Saiu!'
+            					a.style.background = 'green'
+        				}
+    			</script>
+		</body>
+		</html>
+
+
+
+
+
+O fato de se fazer isso por JavaScript ser "melhor" se da pelo motivo de que nao polui o seu codigo HTML. Ja pelo lado positivo de se fazer diretamente no codigo HTML e o fato de fazer pequenas manutencoes pontuais em um especifico elemento.
+
+Outra coisa muito importante e a deteccao de erro! O JavaScript nao te informa quando um erro ocorre, como por exemplo, de digitacao. 
+Entao, como que voce descobre caso isso aconteca? Na maioria dos casos, voce deve inspecionar o codigo fonte do seu site pelo DevTools que ele lhe dira onde e qual erro que aconteceu.
+

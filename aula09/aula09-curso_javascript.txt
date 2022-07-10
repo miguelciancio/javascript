@@ -1,0 +1,53 @@
+Entendendo o DOM
+
+O que e DOM?
+
+DOM e uma cronimo para Document Object Model. Basicamente e um conjuntos de objetos dentro do seu computador que dara acesso aos componentes internos do seu website.
+
+O DOM nao funciona dentro do NodeJS. Ele esta presente quando esta rodando JS dentro do seu navegador.
+
+
+ARVORE DOM:
+
+Basicamente, ela comeca pela sua raiz que a janela (window). Isso signifca que tudo dentro do JavaScript esta dentro de um objeto chamado window. 
+
+Dentro do window temos diversos outros objetos, como por exemplo location (que nos da qual e a localizacao do seu website - URL, pagina atual, pagina anterior), temos o document (e o documento atual), history (guarda todo o seu historico - cook), e etc.
+
+Dentro do document existe um outro objeto muito importante - o HTML - que nada mais e que o o HTML propriamente disso do seu website. 
+
+Dentro do html temos dois filhos (children) - head and body. E por ai vai, criando assim sempre a relacao entre pais (parents) e filhos (children).
+
+Entao, tudo que aparece em sua arvore DOM e chamado de elementos e, basicamente, ha varios metodos para selecionar esses elementos:
+
+1 - por Marca:
+	Usa-se o seguinte comando ---> getElementsByTagName()
+	Quando voce usa esse metodo, voce consegue selecionar mais de dois objetos ao mesmo tempo.
+	Porem, caso queira selecionar apenas um dos multiplos elementos voce deve especifica-lo logo apos dos parenteses: window.document.getElementsByTagName('p')[0].
+	O primeiro elemento que aparece sempre sera representado pelo numero 0. O segundo sera representado pelo numero 1, e assim sucessivamente.
+	O innerText pega o texto sem as filhas, sem formatacao. O innerHTML pega o html inteiro, inclusive com as filhas.
+	
+
+
+2 - por ID:
+	Usa-se o seguinte comando: getElementById()
+
+
+
+3 - por Nome:
+	Usa-se o seguinte comando: getElementsByName()
+
+
+
+4 - por Classe:
+	Usa-se o seguinte comando: getElementsByClassName()
+
+
+5 - por Seletor:
+	Usa-se os seguintes comandos: querySelector() e o querySelectorAll()
+	
+	
+
+
+Basicamente, voce utilizara a selecao por marca (TagName) ou por nome de classe (ClassName) quando voce tiver mais de um objeto com a mesma classe ou nome. 
+Quando quer selecionar um objeto ou familia deles, voce utilizara o ID (ById).
+
