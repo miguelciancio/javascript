@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAIS</title>
+</head>
+<body>
+    <h1>Status de Imigracao</h1>
+
+
+    <label for="txtpais">Digite seu pais de nascimento: <input type="text" name="txtpais" id="txtpais"></label>
+
+    <input type="button" value="Checar" onclick="checar()">
+
+    <div id="msg">
+
+    </div>
+
+    <script>
+        function checar() {
+            var txt = window.document.querySelector('input#txtpais')
+            var msg = window.document.querySelector('div#msg')
+
+            txt = txt.value
+            msg.innerHTML = `<p>Voce mora no(a) pais <strong>${txt}</strong>.</p>`
+
+            if (txt == 'Brasil') {
+                msg.innerHTML += `<p>Logo, voce e <strong>Brasileiro!</strong></p>` 
+            } else {
+                msg.innerHTML += `<p>Logo, voce e <strong>Estrangeiro!</strong></p>`
+            }
+
+        }
+    </script>
+</body>
+</html>
