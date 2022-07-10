@@ -1,0 +1,70 @@
+Operadores do JavaScript:
+
+Focaremos em 5 operadores. Claro que ha mais do que esses cinco, como por exemplo o Typeof.
+
+1 - Aritmeticos:
+
+Operadores usados para fazer calculos. Todos os operadores listados abaixos sao binarios, ou seja, necessitam de dois valores operandos para poder realizar o calculo.
+
++   >  5 + 2   = 7 (soma)
+-    >  5 - 2    = 3 (subtracao)
+*    >  5 * 2    = 10 (multiplicacao)
+/    >  5 / 2     = 2.5 (divisao)
+%  >  5 % 2   = 1 (resto da divisao inteiro)
+**  >  5 ** 2   = 25 (exponenciacao)
+
+Nao se esqueca da precedencia da matematica. A ordem e sempre essa, nao so para o JS mas tambem para todas as linguagens de programacao:
+
+1° - ( )   
+2° - **
+3° - *  /  %
+4° - +  -
+
+
+
+2 - Atribuicao:
+
+var = 5 + 3 -  Variavel a RECEBE 5 + 3.  == 8
+
+var b = a % 5   == 3
+
+var c = 5 * b ** 2  == 45
+
+var d =  10 - a / 2 == 6
+
+var e = 6 * 2 / d  == 2
+
+var f = b % e + 4 / 2 == 3
+
+Temos a auto-atribuicoes tambem:
+var n = 3
+
+n = n + 4  >  n += 4
+
+n = n - 5  >  n -= 5
+
+n = n * 4  >  n *= 4
+
+n = n / 2  >  n /= 2
+
+n = n ** 2  >  n **= 2
+
+n = n % 5  >  n %= 5
+
+E por ai vai. So que e possivel simplificar as auto-atribuicoes:
+n += 4   >   n = n + 4
+
+Ha operadores de incrementos tambem:
+var x = 5
+
+x = x + 1  > x ++
+
+x = x - 1  >  x --
+
+
+
+3 - Relacionais
+
+4 - Logicos
+
+5 - Ternario

@@ -1,0 +1,42 @@
+Aula 06 -  Manipulacao de Dados.
+
+Data types:
+number: Infinity, NaN.
+string
+boolean
+null
+undefined
+object: Array
+function
+
+Ha tres tipos primitivos principais de dados: number, string and boolean.
+
+Muitas das vezes sera necessario fazer uma conversacao dos tipos de variaveis afim de se poder realizar uma operacao. Por exemplo, o sinal de mais tem dois possiveis valores (adicao e concatenacao).
+Entao, se voce tenta somar duas variaveis, voce deve converter de string para number se nao o JavaScript sempre ira entender o numero como sendo uma string.
+Afim de poder realizar esse feito, ha algumas formas:
+1 - Number.parseInt(n)      - conversao para numero inteiro.
+2 - Number.parseFloat(n) -  conversao para numero real (float).
+3 - Number(n)                     - Nesse caso, o proprio JavaScript decide se o numero sera inteiro ou real. 
+Assim, caso voce queira apenas numero inteiro use o exemplo 1. No caso de querer apenas numero real use o exemplo 2. Ja caso voce queira que o proprio JavaScript decida se sera inteiro ou real baseado com que o usuario digitou, use o exemplo 3.
+Atencao as consoantes em maiusculas, pois o JavaScript e case sensitive.
+E possivel realizar conversao de numero para string tambem:
+1 - String(n), ou
+2 - n.toString
+
+Formatacao de Strings:
+var s = 'JavaScript'
+'Estou aprendendo s'      - nao faz interpolacao
+'Estou aprendendo ' + s  - usa concatenacao
+'Estou aprendendo ${s}'  - usa template string
+${n} - esse comando e chamado de placeholder.
+
+Ha tambem mais coisas que podem ser feitas com uma string, por exemplo:
+s.lenght                - Me diz quantos caracteres ha essa string.
+s.toUpperCase() - converte sua string para letras maiusculas.
+s.toLowerCase() - converte sua string para letras minusculas.
+
+Formatacao de numbers:
+var n1 = 1543.5
+n1.toFixed(2) = 1543.50
+n1.toFixed(2).replace('.' , ',') = 1543,50
+n1.toLocaleString('pt-BR', {style:'currency': currency: 'BRL'}) = R$ 1.543,50

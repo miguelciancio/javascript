@@ -1,0 +1,82 @@
+Operadores (Parte 02) - Curso JavaScript
+
+Operadores Relacionais:
+Sao os seguintes:
+>    ->  Maior,
+<    ->  Menor,
+>=  ->  Maior ou igual que,
+<=  ->  Menor ou igual que,
+==  ->  Igual que,
+!=   ->  Nao igual ou diferente.
+
+Ha tambem os operadores relacionais de identidade.
+5 == 5   ->  true.
+5 == '5'  ->  true.
+
+Isso acontece porque o sinal de igualdade nao testa o tipo. JavaScript analisa se o 5 tem o mesmo valor que o outro. Embora eles sejam de tipos diferetes, ainda possuem a mesma grandeza. 5 numerico e '5' strings possuem a mesma grandeza.
+Para resolver esse pequena detalhe, existe o operador de identidade. Que e tambem conhecido como o operador de igualdade restrita. Ele checa se tem o mesmo valor e o mesmo tipo e nos e dado da seguinte maneira:
+5 === '5'  -> false.
+
+
+Operadores Logicos:
+!      -->  negacao,
+&&  -->  conjuncao,
+||     -->  disjuncao.
+
+O operador ! (nao) e tratado como um operador unario, ou seja, possui apenas um operando. Por exemplo, depois da exclamacao ou voce coloca 'true' ou 'false'.
+	Ex.: ! true   -->  false.
+	       ! false  -->  true.
+
+O operador de conjuncao e um operador binario. Ou seja, possui dois valores logicos que nos dara 4 possiveis resultados.
+	Ex.: true && true     -->  true.
+                         true && false    -->  false.
+                         false && true    -->  false.
+                         false && false  -->  false.
+
+Ou seja, o resultado so te satisfaz quando os dois resultados logicos forem verdadeiras - quando as duas condicoes forem atendidas.
+
+
+O operador de disjuncao tambem e um operador binario. Ou seja, tambem possui dois valores logicos que nos dara 4 possiveis resultados.
+	Ex.: true && true     -->  true.
+                         true && false    -->  true.
+                         false && true    -->  true.
+                         false && false  -->  false.
+
+Na disjuncao, basta que um dos dois resultados seja verdadeiro para nos retornar uma verdade - quando uma das condicoes for atendidade.
+
+
+MUITO IMPORTANTE!!!!!!!!!!!!
+
+Quando temos operadores aritmeticos, relacionais e logicos na mesma expressao, a ordem feita e a seguinte:
+1 - todos os operadores aritmeticos,
+2 - operadores relacionais,
+3 - operadores logicos.
+
+E se por acaso voce tiver na mesma expressao um e (&&), ou ( || ) e um nao (!), a ordem executada e a seguinte:
+1 - nao,
+2 - e,
+3 - ou.
+
+
+ATUALIZANDO ORDEM DE PRECEDENCIA:
+1 - Operadores artimeticos - Em sua respectiva ordem,
+2 - Operadores relacionais - Nao possui ordem de precedencia (quem aparecer primeiro sera feito primeiro, da esquerda pra direita - ordem de leitura),
+3 - Operadores logicos - Ordem de precendencia (1 - !, 2 - &&, 3 - ||).
+
+
+O operador ternario e chamado desse jeito porque ele tem tres partes, ou seja, um bloco de teste, um de verdadeiro e outro de falso. Ele junta tres operandos.
+	Ex.: test ? true : false.
+
+Ou seja, ele teste algo e nos da uma resposta caso esse teste seja positivo e uma outra completamente diferente caso seja negativo. Assim, pode ter duas possiveis respostas distintas uma da outra para todas as situacoes.
+
+
+
+
+
+
+
+
+
+
+
+
