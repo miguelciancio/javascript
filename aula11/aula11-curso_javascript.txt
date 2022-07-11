@@ -1,0 +1,33 @@
+Condicoes em JS - Parte 01.
+
+Existem varios tipos de condicoes. Ou melhor, desvio condicional.
+
+1 - If
+
+Funciona na seguinte estrutura:
+
+if (condicao) {
+	true
+} else {
+	false
+}
+
+TIPOS DE CONDICAO:
+
+A condicao simples e quando temos apenas uma hipotese, uma condicao de fato. Ou seja, apenas um if por exemplo. Ja a condicao composta e quando temos duas ou mais hipoteses, duas ou mais condicoes de fato. Ou seja, pelo menos um if e um else.
+
+Ex.:
+
+1 - Condicao simples.
+
+if (condicao) {
+	true
+}
+
+2 - Condicao composta.
+
+if (condicao) {
+	true
+} else {
+	false
+}
