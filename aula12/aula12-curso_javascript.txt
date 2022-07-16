@@ -1,0 +1,56 @@
+Condicoes em JS - Parte 02.
+
+Condicoes Aninhadas
+
+Isso ocorre quando voce pega uma condicao composta e simplesmente adiciona outras condicoes dentro dela.
+Ex.:
+if (condicao 1) {
+	BLOCO 1
+} else {
+	if (condicao 2) {
+		BLOCO 2
+	} else {
+		BLOCO 3
+	}
+}
+
+
+Condicao multipla
+
+Serve para valores fixos. Ela e muito util no mundo da programacao principalmente quando quer trabalhar com valores fixos, nao servindo muito bem para intervalos com valores.
+Ex.:
+switch (expressao) {
+	case valor 1:
+		BLOCO 1
+		break  //  Extremamente importante!! Nao esquecer de usa-lo.
+	case valor 2:
+		BLOCO 2
+		break
+	case valor 3:
+		BLOCO 3
+		break
+	default:  //  Se nenhum dos valores acima for satisfeito, faca esse aqui.
+		BLOCO 4
+		break
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
