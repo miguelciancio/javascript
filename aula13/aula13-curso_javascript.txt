@@ -1,0 +1,81 @@
+Repeticoes em JavaScript - Parte 1.
+
+Exemplo de algo que faz todo dia.
+
+function comerPizza() {
+	comerFatia()
+	comerFatia()
+	comerFatia()
+	comerFatia()
+	comerFatia()
+	comerFatia()
+	comerFatia()
+	comerFatia()
+}
+
+Programar e escrever os programas para que saia de um ponto A ate um ponto B. E para conseguir atingir esse objetivo, existem varias formas que chamamos de estrutura de controle.
+
+Primeira dela e a sequencia. Nada mais e que sair do ponto A ate o ponto B executando tarefas sequencialmente a fim de atingir seu objetivo final.
+
+As vezes, existem possibilidades durante as sequencias. Para isso, temos as condicoes. Nada mais e que teste logicos que retornam duas possibilidades: true or false.
+De acordo com cada retorno, o seu programa executa tarefas distintas. (If, Else If, Else).
+
+
+REPETICOES (LACOS).
+
+
+Comeca exatamente como uma condicao. Ele testa uma expressao retornando duas possibilidades: true or false. A diferenca e no comportamento dele.
+
+Se o teste for true, ele vai executar um bloco so que ele nao vai seguir desse bloco para a proxima linha. Ele vai voltar pro inicio do bloco, checar a condicao novamente - fazendo assim - um looping.
+
+Looping e laco, e repeticao.
+
+Ele fica executando isso enquanto o seu teste for true. A partir do momento que seu teste for false, o laco e quebrado e segue o fluxo normal do seu programa.
+
+Ex.:
+	while (condicao) {
+		<BLOCO>
+	}
+
+
+ATUALIZANDO A FUNCAO comerPizza():
+
+function comerPizza() {
+	while (temFatia()){
+		comerFatia()
+	}
+}
+
+
+Desse jeito voce deixa o codigo mais limpo, clear. Alem do que e muito mais eficiente.
+
+Assim, o while e classificado como estrutura de repeticao com teste logico no inicio. Isso porque ele faz o teste e sendo verdadeiro executa o bloco. 
+
+So que existe uma outra possibilidade. Ao inves de fazer o teste logico no inicio, voce pode fazer tambem a estrutura ao contrario. Primeiro executa o bloco e depois faz o teste.
+Ex.:
+	do {
+		<BLOCO>
+	} while (condicao)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
