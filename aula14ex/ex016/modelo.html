@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Exercicio</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Titulo</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>
+                <label for="inicio">Inicio: <input type="number" name="txtn1" id="txtn1"></label>
+            </p>
+            <p>
+                <label for="fim">Fim: <input type="number" name="txtn2" id="txtn2"></label>
+            </p>
+            <p>
+                <label for="passo">Passo: <input type="number" name="txtn3" id="txtn3"></label>
+            </p>
+
+            <input type="button" value="Contar" onclick="contar()">
+        </div>
+
+        <div id="resultado">
+            Preparando contagem...
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Miguel Ciancio Figueiredo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
