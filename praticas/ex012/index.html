@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media de Aproveitamento</title>
+    <link rel="stylesheet" href="estilo.css">
+    
+</head>
+<body>
+    <!-- CABECALHO -->
+    <header>
+        <h1>Media de Aproveitamento do Aluno</h1>
+    </header>
+
+    <!-- CONTEUDO PRINCIPAL -->
+    <main>
+        <section>
+            <!-- INPUT DE DADOS -->
+                <div id="input">
+                    <h2>Registro de Aluno:</h2>
+                    <p>
+                        Nome do Aluno: <input type="text" name="txtnome" id="txtnome">
+                    </p>
+                    <p>
+                        Numero de identificacao: <input type="number" name="txtid" id="txtid">
+                    </p>
+                    <p>
+                        Primeira nota: <input type="number" name="txtnota1" id="txtnota1">
+                    </p>
+                    <p>
+                        Segunda nota: <input type="number" name="txtnota2" id="txtnota2">
+                    </p>
+                    <p>
+                        Terceira nota: <input type="number" name="txtnota3" id="txtnota3">
+                    </p>
+                    <input type="button" value="Registrar" id="botao">
+                </div>
+            <!-- OUTPUT DOS DADOS -->
+                <div id="output">
+                    <h2>Consulta de Aluno:</h2>
+                    <p>
+                        Digite o numero de identificacao: <input type="number" name="txtid2" id="txtid2">
+                    </p>
+                    <input type="button" value="Verificar" id="botao">
+                    
+                    <div id="resultado">
+                        Resultado vai aqui...
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <!-- RODAPE -->
+    <footer>
+        <p>&copy; Miguel Figueiredo.</p>
+    </footer>
+
+    <!-- JS SCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
