@@ -1,0 +1,43 @@
+Variaveis Compostas em JavaScript
+
+
+. Variaveis simples so conseguem armazenar UM VALOR por vez.
+
+. Variaveis compostas devem ser capazes de armazenar VARIOS VALORES em uma mesma estrutura.
+
+
+Exemplo de um Vetor.:
+	vaga a = [car1, car2, car3]
+
+Vamos la, vetor e uma variavel composta capaz de suportar varios elementos distintos em suas respectivas posicoes idependentes.
+
+Elementos de um vetor e um par que agrupa o espaco da memoria, o valor colocado dentro dele e o indice.
+
+Indice (ou chave) e o numero de identificacao de cada variavel dentro da array (do elemento). Seguinte o exemplo anterior, temos: car1 - a0, car2 - a1 e car3 - a2.
+
+Importante de lembrar que a primeira posicao de uma variavel composta comeca com 0.
+
+Por ultimo, temos o conteudo do valor que nesse mesmo exemplo seria os carros.
+
+RESUMINDO:
+Um array e uma variavel composta por varios elementos que possuem seu proprio valor e chave de identificacao (indice).
+
+Ex.:
+	let num = [5, 8, 4]
+
+ACRESCENTANDO MAIS VALOR DENTRO DA SUA ARRAY:
+ num[3] = 6
+
+O JavaScript percebe automaticamente que voce nao possui uma posicao 3 e por consequencia adiciona para ti o seu novo elemento na posicao 3 (ele cria automaticamente isso).
+
+Agora, caso voce nao queira criar/adicionar em uma posicao especifica, ou seja, quer que o proprio JS adicione no fim da sua lista automaticamente, basta fazer o seguinte:
+num.push(7)
+
+Temos como saber o comprimento do array tambem atraves do length. Nao se coloca parenteses do fim do length porquele ele e um atributo e nao metodo.
+num.length
+
+Temos tambem o metodo .sort(). Ele basicamente organizar a sua lista de forma crescente ou decrescente.
+num.sort()
+
+Temo tambem o metodo .indexOf(). Ele nos ajuda a buscar valores dentro de um array. Ele retorna a chave onde que o vetor se encontra. Se retornar o valor de -1, significa que ele pesquisou e nao pode encontrar a sua pesquisa.
+num.indexOf(7)
