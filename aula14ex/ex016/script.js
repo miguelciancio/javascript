@@ -1,27 +1,36 @@
 function contar() {
-    var res = window.document.querySelector('div#resultado')
-    var inicio = window.document.querySelector('input#txtn1')
-    var fim = window.document.querySelector('input#txtn2')
-    var passo = window.document.querySelector('input#txtn3')
+    let res = window.document.querySelector('div#resultado')
+    let inicio = window.document.querySelector('input#txtn1')
+    let fim = window.document.querySelector('input#txtn2')
+    let passo = window.document.querySelector('input#txtn3')
 
-    inicio = Number(inicio.value)
-    fim = Number(fim.value)
-    passo = Number(passo.value)
-
-    var display = ""
-
-    if (inicio != 0 && fim != 0) {
-        if (passo == 0) {
-            window.alert('Passo invalido! Considerando PASSO 1')
-            passo = 1
-        }
-
-        for (inicio; inicio <= fim; inicio+=passo) {
-            display += `${inicio} 👉 `
-        }
-    
-        res.innerHTML = `Contando: </br> ${display} 🏁`
-    } else {
+    // VALIDACAO DE DADOS.
+    if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        // window.alert('[ERRO] Faltam dados!')
         res.innerHTML = 'Impossivel contar!'
+    
+    // IMPRIMINDO EM TELA O RESULTADO
+    } else {
+        res.innerHTML = 'Contando: </br>'
+        let i = Number(inicio.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
+
+        if (p <= 0) {
+            window.alert('Passo invalido! Considerando PASSO 1')
+            p = 1
+        }
+        // CONTAGEM CRESCENTE
+        if (i < f) {
+            for (let c = i; c <= f; c += p) {
+                res.innerHTML += ` ${c} \u{1F449}`
+            }
+        // CONTAGEM REGRESSIVA
+        } else {
+            for (let c = i; c >= f; c -= p) {
+                res.innerHTML += ` ${c} \u{1F449}`
+            }
+        }
+        res.innerHTML += `\u{1F3C1}`
     }
 }
