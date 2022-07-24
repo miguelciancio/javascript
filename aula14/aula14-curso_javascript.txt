@@ -1,0 +1,23 @@
+Repeticoes em JavaScript - Parte 2.
+
+Temos tambem estrutura de repeticao com variavel de controle. Basicamente e feito tres coisas: inicializacao, um teste logico e o incremento.
+Ex.:
+	for (inicio; teste; incr) {
+		<BLOCO>
+	}
+
+
+Ex.:
+	var c = 1
+	while (c <= 10) {
+		<BLOCO>
+		c++	
+	}
+
+_____________________________________________
+
+	for (var c = 1; c <= 10; c++) {
+		<BLOCO>
+	}
+
+O "for" e otimo para ser usado quando voce sabe o limite da sua estrutura de repeticao.
