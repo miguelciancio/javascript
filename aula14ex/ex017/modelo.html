@@ -4,28 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exercicio</title>
+    <title>Tabuada</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+    <!-- CABECALHO -->
     <header>
-        <h1>Titulo</h1>
+        <h1>Tabuada</h1>
     </header>
 
+    <!-- CONTEUDO PRINCIPAL -->
     <section>
         <div>
-            Testando...
+            <p>
+                <label for="txtn">Numero: <input type="number" name="num" id="txtn"></label>
+                <input type="button" value="Gerar Tabuada" onclick="tabuada()">
+            </p>
         </div>
 
-        <div>
-            Ola!
+        <div id="resultado">
+            <select name="tabuada" id="seltab" size="10">
+                <option>Digite um numero acima</option>
+            </select>
         </div>
     </section>
 
+    <!-- RODAPE -->
     <footer>
         <p>&copy; Miguel Ciancio Figueiredo</p>
     </footer>
 
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 </body>
 </html>
