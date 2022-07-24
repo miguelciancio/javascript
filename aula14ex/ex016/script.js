@@ -10,9 +10,18 @@ function contar() {
 
     var display = ""
 
-    for (inicio; inicio <= fim; inicio+=passo) {
-        display += `${inicio} 👉 `
-    }
+    if (inicio != 0 && fim != 0) {
+        if (passo == 0) {
+            window.alert('Passo invalido! Considerando PASSO 1')
+            passo = 1
+        }
 
-    res.innerHTML = `Contando: </br> ${display} 🏁`
+        for (inicio; inicio <= fim; inicio+=passo) {
+            display += `${inicio} 👉 `
+        }
+    
+        res.innerHTML = `Contando: </br> ${display} 🏁`
+    } else {
+        res.innerHTML = 'Impossivel contar!'
+    }
 }
