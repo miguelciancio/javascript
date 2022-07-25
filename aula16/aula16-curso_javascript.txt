@@ -1,0 +1,35 @@
+Funcoes em JavaScript:
+
+JavaScript e uma linguagem que funciona sobre o paradigma de funcoes, ela e uma linguagem funcional.
+
+Toda funcao precisa ter uma "chamada". E necessario tambem um "parametro". O processo todo que acontece dentro da funcao e chamado de "acao" e quando entrega o resultado da funcao temos o "retorno".
+
+Obs.: Nem todas as funcoes tem parametros e retornos.
+Obs2.: Uma funcao em JavaScript so pode ter apenas um retorno.
+
+Tecnicamente: 
+. Funcoes sao acoes executadas assim que sao CHAMADAS ou em decorrencia a algum EVENTO.
+. Uma funcao pode receber PARAMETROS e retornar um RESULTADO.
+Ex.:
+	function acao(param) {
+		<BLOCO>
+		return res
+	}
+	
+	acao(5)   --->   Chamada da acao.
+	          '--------> Parametro real.
+
+
+Ex2.:
+	function parimp(n) {
+		if (n % 2 == 0) {
+			return 'par'		
+		} else {
+			return 'impar'
+		}
+	}
+
+	let res = parimp(11)
+
+
+
