@@ -1,33 +1,53 @@
 const num = window.document.getElementById('txtn')
-const optlist = window.document.getElementById('sellist')
+const mySelect = window.document.getElementById('selopt')
 const myList = []
 
 function adicionar() {
     // Criando analisador com validacao de entrada de dados.
     // VALIDACAO
-    if (num.value.length < 1 || num.value.length > 100) {
-        window.alert('Valor invalido ou ja encontrado na lista.')
-    
-    // CRIACAO DA TABELA.
+    if (num.value < 1 || num.value > 100) {
+        window.alert('Numero invalido. Por favor, digite um numero entre 1 e 100.')
     } else {
         let n = Number(num.value)
-        
-        myList.push(n)
 
-        i = 0
-        while (i < myList.length) {
-            let optn = n[myList.length - 1]
-            let el = window.document.createElement('option')
-            el.text = `Valor ${n} adicionado.`
-            el.value = `val${n}`
-            optlist.appendChild(el)
-            i = i + i
+        if (myList.includes(n)) {
+            window.alert('Numero ja inserido na lista. Por favor, digite um outro numero entre 1 e 100.')
+        } else {
+            myList.push(n)
+            let option = window.document.createElement('option')
+            option.text = `Valor ${n} adicionado`
+            mySelect.add(option)
         }
-
-        
-        /*let item  = document.createElement('option')  //  CRAIACAO ELEMENTO HTML.
-        item.text = `Valor ${num.value} adicionado`  
-        item.value = `num${count}`
-        sellist.appendChild(item)  //  ADICIONA O ELEMENTE CRIADO EM TELA.*/
     }
+}
+
+function finalizar() {
+    let clique = window.document.getElementById('btn')
+
+    // CAPTURA DIV RESULTADO
+    let res = window.document.getElementById('res')
+
+    // INFORMA MAIOR VALOR DENTRO DA ARRAY
+    let maior = Math.max.apply(null, myList)
+
+    // INFORMA MENOR VALOR DENTRO DA ARRAY
+    let menor = Math.min.apply(null, myList)
+
+    // SOMA DE TODOS OS VALORES DA SUA ARRAY
+    let soma = 0
+    for (i = 0; i < myList.length; i++) {
+        soma += myList[i]
+    }
+
+    // MEDIA DE TODOS OS VALORES DA SUA ARRAY
+    let media = soma / myList.length
+
+    // TOTAL DE NUMEROS DENTRO DA ARRAY
+    res.innerHTML = `
+                    </br> Ao todo, temos ${myList.length} numeros cadastrados. 
+                    </br> O maior valor informado foi ${maior}.
+                    </br> O menor valor informado foi ${menor}.
+                    </br> Somando todos os valores, temos ${soma}.
+                    </br> A media dos valores digitados e ${media}.
+                    `
 }
