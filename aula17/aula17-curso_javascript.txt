@@ -1,0 +1,41 @@
+Aula 17 - Proximos Passos.
+
+O que vimos ate aqui:
+1 - Fundamentos;
+2 - Variaveis e dados;
+3 - Operadores;
+4 - Condicoes;
+5 - Repeticoes;
+6 -  Arrays;
+7 - Functions;
+8 - DOM.
+
+Quais o proximos passos?
+1 - Termine o curso de HTML5 e CSS3.
+2 - Estude muito sobre funcoes (arrow functions, callbacks, funcoes anonimas, as iifes).
+3 - Estudar mais sobre o javascript funcional.
+4 - objetos (orientacao a objetos em JS).
+5 - Modularizacao (deixar codigos separados em arquivos separados, reutilizar codigos utilizando javascript).
+6 - RegEx (Expressoes Regulares) - Otimo para a validacao de Dados.
+7 - JSON (Meio que uma estrutura de objetos que voce consegue salvar / transmitir dados localmente).
+8 - AJAX.
+9 - NodeJS (Aprender a como fazer os seus scripts a rodarem em servidor).
+10 - JQUERY, VIEWJS, ANGULAR, etc.
+
+
+BASICO SOBRE OBJETOS:
+A grande diferenca entre um objeto e array e que no array voce nao consegue alterar o indice. Ou seja, voce pode cadastrar qualquer valor dentro dela, so que o indice sera sempre numerico.
+
+Ja com um objeto, voce cria uma array com a flexibilidade de nomear o seu indice como voce quiser.
+
+Ex.:
+let amigo  = {nome:'Jose', sexo:'M', peso:85.4, engordar(p){}}
+
+Amigo
+Jose	M	85.4	[function]
+nome	sexo	peso	engordar()
+
+
+Objetos podem guardar funcionalidades, o que chamamos de metodos.
+
+No JS o array e um objeto e o objeto tambem e um objeto, isso e confuso mas acontece porque ambos sao estruturas da mesma classe.
