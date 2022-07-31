@@ -1,6 +1,7 @@
 const num = window.document.getElementById('txtn')
 const mySelect = window.document.getElementById('selopt')
 const myList = []
+const res = window.document.getElementById('res')
 
 function adicionar() {
     // Criando analisador com validacao de entrada de dados.
@@ -13,6 +14,7 @@ function adicionar() {
         if (myList.includes(n)) {
             window.alert('Numero ja inserido na lista. Por favor, digite um outro numero entre 1 e 100.')
         } else {
+            res.innerHTML = ""
             myList.push(n)
             let option = window.document.createElement('option')
             option.text = `Valor ${n} adicionado`
@@ -22,10 +24,7 @@ function adicionar() {
 }
 
 function finalizar() {
-    let clique = window.document.getElementById('btn')
-
-    // CAPTURA DIV RESULTADO
-    let res = window.document.getElementById('res')
+    //let clique = window.document.getElementById('btn')
 
     // INFORMA MAIOR VALOR DENTRO DA ARRAY
     let maior = Math.max.apply(null, myList)
