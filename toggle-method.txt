@@ -1,0 +1,30 @@
+Toggle () Method - JavaScript
+
+Basically, what toggle() method does is check if the class is provided to the element, so it will remove it. If the class isn't provided to the element so it will just add.
+	. If your element has the class name you want -> remove it.
+	. If not -> Add it.
+
+
+Definition according to W3C:
+The toggle() method togles between hid() and show() for the selected elements. This methods checks the selected elements for visibility. show() is run if an element is hidden and hide() is run if an element is visible. This create a toggle effect.
+
+OBS.:
+	Hidden elements will not be displayed at all and also no longer affects the layouyt of your page.
+
+TIP.:
+	This method can also be used to toggle between custom functions.
+
+Parameter:
+1 - speed:
+	Optional. Specifies the speed of the hide/show effect.
+	Possible Values: miliseconds, slow, fast.
+
+2 - easing:
+	Optional. Specifies the speed of the element in different points of the animation. Default value is "swing".
+	Possible Values: 
+		. "swing" -> moves sloer ate the begging/end, but faster in the middle.
+		."linear" -> moves in a constant speed.
+	Tip.: More easing functions are available in external plugins.
+
+3 - callback:
+	Optional. A function to be executed after the toggle() method is completed.

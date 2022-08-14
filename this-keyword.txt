@@ -1,0 +1,147 @@
+This Keyword - JavaScript
+
+In JavaScript, the 'this' keyword refers to an OBJECT. WHICH object depends on how 'this' is being invoked (used or called).
+Ex.:
+1 - In an Object Method, 'this' refers to the OBJECT.
+2 - Alone, 'this' refers to the GLOBAL OBJECT.
+3 - In a function, 'this' refers to the GLOBAL OBJECT.
+4 - In a function, in strict mode, 'this' is undefined.
+5 - In a event, 'this' refers to the ELEMENT that received the event.
+6 - Methods like 'call()', 'apply()', and 'bind()' can refer 'this' to ANY OBJECT.
+
+OBS.:
+	This is not a variable. In fact, it is a keyword so you cannot change the value of 'this'.
+
+-----------x---------------------x------------------x---------------x---------------x--------------x----------------
+
+'This' in functions:
+
+So, basically, 'this' is a reference to the OBJECT that is executing the current function.
+
+Rules of thumb:
+1st   ---> If the function is part of an object, you call that function a method. So, if the function is a method in an object, 'this' references that object itself.
+2nd ---> If the function is a regular function which means it is not part of an object, 'this' reference is the global object which is the 'window' object in browsers and global in node.js.
+
+Ex.:
+	const video {
+		title: 'a',
+		play() {
+			console.log(this);
+		}
+	};
+	
+	// RETURN
+	// Returns the video object on the console.
+	{title: 'a', play: f}	
+
+The same happens even though you add another method later in your object. It will always return the object itself.
+
+Example of 1st rule.:
+	const video = {
+		title: 'a',
+		play() {
+			console.log(this);
+		}
+	};
+	
+	video.stop = function() {
+		console.log(this);
+	};
+	
+	video.stop()
+	
+	// RETURN
+	// By the same token, you can add a new method later in the object and get same result.
+	{title: 'a', play: f, stop: f}
+
+Example of 2nd rule.:
+	const video = {
+		title: 'a',
+		play() {
+			console.log(this);
+		}
+	};
+	
+	function playVideo() {
+		console.log(this);
+	};
+
+	playVideo();
+
+	// RETURN
+	Window {postMessage: f, ...}
+
+So, when you use the 'this' in a regular function, as you could see, it returns the global object which is the 'window' object in browsers and 'global' in node.js.
+
+Now, what if this is a construction function? You call the construction functions using the 'new' operator.
+Ex.:
+	function Video(title) {
+		this.title = title;
+		console.log(this);
+	};
+	
+	const v = new Video('b');
+	
+	// RETURN
+	Video {title: 'b'}
+
+So, in this case, instead of the window object you get a new object because when you use the 'new' operator, this new operator creates a new empty object - like this { } - and sets 'this' in this constructot function to point the empty object. So, in the previously example, you add the title property to this new object (v variable).
+
+Quick Recap:
+When dealing with regular functions, 'this' by default reference to the global object. However, if you call a function using the 'new' operator which is the case for contructor functions, 'this' will reference a new empty object.
+
+Now, the last example:
+	const video = {
+		title: 'a', 
+		tags: ['a', 'b', 'c'],
+		showTags() {
+			this.tags.forEach(function(tag) {
+				console.log(tag);
+			});
+		}
+	};
+
+	// RETURN
+	a
+	b
+	c
+
+Now, what should you do if you want to put the title next to each tag? If you just try to add 'this.title' inside the console.log as 1st item, it will return 'undefined' because when you do it - as a matter of fact - is returning thw window object (global object).
+That is happening because you are using a regular callback function. So, that means you are using a regular function inside a method function, and as a rule, 'this' always returns the global object when using it even though it is inside a method object (a function which is part of an object).
+So, how can you resolve this problem?
+Well, the 'forEach()' method has two parameters. The first parameter is your callback function and the second parameter it 'thisArg'. So, you can pass an object there and 'this' will reference thar object.
+Ex.:
+	const video = {
+		title: 'a', 
+		tags: ['a', 'b', 'c'],
+		showTags() {
+			this.tags.forEach(function(tag) {
+				console.log(this.title, tag);
+			}, this);
+		}
+	};
+
+	video.showTags();
+
+	// RETURN
+	a a
+	a b
+	a c
+
+However, not all method in JS has the ability to pass 'this' parameter. So, you have some different solutions for this problem!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
