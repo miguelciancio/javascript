@@ -29,6 +29,8 @@ Ex.:
 			console.log(this);
 		}
 	};
+
+	video.play();
 	
 	// RETURN
 	// Returns the video object on the console.
