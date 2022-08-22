@@ -1,0 +1,25 @@
+Project 4: Stop-Watch / Pro
+
+Key Concepts for Project:
+1 - document.querySelector()
+2 - document.getElementById()
+3 - addEventListener()
+4 - if statements
+5 - toString()
+6 - setInterval()
+7 - innerHTML
+
+---------*-------------*---------------*--------------*-------------*-----------*---------------*--------------*-------
+
+setInterval() and clearInterval() methods:
+
+The 'setInterval()' method calls a functions at specified interval (in milliseconds). It continues calling the function until 'clearInterval()' is called, or the window is closed.
+This method has basically two required parameters to work: the function & the milliseconds. The returned value is an 'id', so in order to clear an interval (cancel the timer), you must use this 'id' returned from 'setInterval()' method.
+Ex.:
+	myInterval = setInterval(functio, milliseconds);
+	clearInterval(myInterval);
+
+Now, if you want to call a function (execute it) only once after a number of milliseconds, so you must likely use the 'setTimeout()' method instead. Similar with the 'setInterval()' method, you can call for another method - 'clearTimeout()' - to prevent the function from starting and in order to clear a timeout, you also must use the 'id' returned from 'setTimeout()' method.
+Ex.:
+	myTimeout = setTimeout(function, milliseconds);
+	clearTimeout(myTimeout);
